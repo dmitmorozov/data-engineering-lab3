@@ -1,0 +1,9 @@
+{
+  "at_utc": "2026-11-04T14:37:38.962979+00:00",
+  "phase": "gone",
+  "path": "/lab4-ephemeral-demo/ephemeral-20261104-1",
+  "child_exists": false,
+  "ephemeral_owner": null,
+  "parent_exists": true,
+  "passed": true
+}

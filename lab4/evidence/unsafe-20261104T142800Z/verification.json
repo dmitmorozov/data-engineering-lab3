@@ -1,0 +1,62 @@
+{
+  "run_id": "unsafe-20261104T142800Z",
+  "mode": "unsafe",
+  "passed": true,
+  "checks": {
+    "A_one_staged_result": true,
+    "A_matches_lab3": true,
+    "A_result_digest": true,
+    "A_controls": true,
+    "B_one_staged_result": true,
+    "B_matches_lab3": true,
+    "B_result_digest": true,
+    "B_controls": true,
+    "backup_resumed_nonempty_checkpoint": true,
+    "negotiated_session_timeout_10_seconds": true,
+    "backup_published_before_resume": true,
+    "two_successful_publications": true,
+    "unsafe_final_pointer_A_version_2": true,
+    "no_final_rejection_in_unsafe_mode": true,
+    "failover_measured": true,
+    "both_leader_epochs_visible": true,
+    "official_result_matches_lab3": true,
+    "official_hash_matches_pointer": true
+  },
+  "comparisons": {
+    "A": {
+      "keys": 101718,
+      "mismatched_keys": 0,
+      "sha256": "3d1559ccc0967058a1c73fa7c94e9b0623b027c57e28f20ba142b29189c788f7"
+    },
+    "B": {
+      "keys": 101718,
+      "mismatched_keys": 0,
+      "sha256": "3d1559ccc0967058a1c73fa7c94e9b0623b027c57e28f20ba142b29189c788f7"
+    }
+  },
+  "failover_seconds": 11.65600000001723,
+  "pause_seconds": 40.26600000000326,
+  "final_pointer": {
+    "value": {
+      "coordinator_id": "A",
+      "emissions": [
+        8810,
+        40778,
+        180490
+      ],
+      "epoch": 1,
+      "epoch_version": 1,
+      "input_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+      "key": "unsafe-20261104T142800Z/attempts/A-epoch-1/counts.csv",
+      "records": 2057,
+      "resumed_from_batch": 0,
+      "sha256": "3d1559ccc0967058a1c73fa7c94e9b0623b027c57e28f20ba142b29189c788f7",
+      "unique_keys": [
+        1256,
+        15647,
+        84815
+      ]
+    },
+    "version": 2
+  }
+}

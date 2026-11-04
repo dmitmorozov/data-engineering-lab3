@@ -1,0 +1,22 @@
+{
+  "at_utc": "2026-11-04T14:27:59.704136+00:00",
+  "servers": {
+    "2181": "Zookeeper version: 3.9.6-a355171b081b5b60749db8f19cca1528b0df936f, built on 2026-09-03 19:29 UTC\nLatency min/avg/max: 0/0.0/0\nReceived: 1\nSent: 0\nConnections: 1\nOutstanding: 0\nZxid: 0x200000003\nMode: follower\nNode count: 18\n",
+    "2182": "Zookeeper version: 3.9.6-a355171b081b5b60749db8f19cca1528b0df936f, built on 2026-09-03 19:29 UTC\nLatency min/avg/max: 0/0.0/0\nReceived: 1\nSent: 0\nConnections: 1\nOutstanding: 0\nZxid: 0x300000000\nMode: leader\nNode count: 18\nProposal sizes last/min/max: -1/-1/-1\n",
+    "2183": "Zookeeper version: 3.9.6-a355171b081b5b60749db8f19cca1528b0df936f, built on 2026-09-03 19:29 UTC\nLatency min/avg/max: 0/0.0/0\nReceived: 1\nSent: 0\nConnections: 1\nOutstanding: 0\nZxid: 0x200000003\nMode: follower\nNode count: 18\n"
+  },
+  "docker_ps": "NAME             IMAGE             COMMAND                  SERVICE   CREATED              STATUS              PORTS\nde-lab4-zoo1-1   zookeeper:3.9.6   \"/bin/bash -ec 'cp /…\"   zoo1      About a minute ago   Up About a minute   127.0.0.1:2181->2181/tcp\nde-lab4-zoo2-1   zookeeper:3.9.6   \"/bin/bash -ec 'cp /…\"   zoo2      About a minute ago   Up 12 seconds       127.0.0.1:2182->2181/tcp\nde-lab4-zoo3-1   zookeeper:3.9.6   \"/bin/bash -ec 'cp /…\"   zoo3      About a minute ago   Up 12 seconds       127.0.0.1:2183->2181/tcp\n",
+  "client_probe": {
+    "expected": "available",
+    "successful": true,
+    "value": "2026-11-04T14:27:59.948533+00:00",
+    "version": 3,
+    "elapsed_seconds": 0.0470000000204891,
+    "expectation_met": true
+  },
+  "role_counts": {
+    "leader": 1,
+    "follower": 2
+  },
+  "roles_match": true
+}

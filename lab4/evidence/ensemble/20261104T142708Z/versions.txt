@@ -1,0 +1,8 @@
+openjdk version "17.0.21" 2026-10-20
+OpenJDK Runtime Environment Temurin-17.0.21+9 (build 17.0.21+9)
+OpenJDK 64-Bit Server VM Temurin-17.0.21+9 (build 17.0.21+9, mixed mode, sharing)
+
+CONTAINER           REPOSITORY          TAG                 PLATFORM            IMAGE ID            SIZE                CREATED
+de-lab4-zoo1-1      zookeeper           3.9.6               linux/amd64         bbf678337a92        118MB               4 minutes ago
+de-lab4-zoo2-1      zookeeper           3.9.6               linux/amd64         bbf678337a92        118MB               4 minutes ago
+de-lab4-zoo3-1      zookeeper           3.9.6               linux/amd64         bbf678337a92        118MB               4 minutes ago

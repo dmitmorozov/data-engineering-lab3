@@ -1,82 +1,38 @@
-# Лабораторная работа № 3: аналитики
+# Инженерия данных
 
 Морозов Дмитрий Александрович, ИСУ 466761.
 
-RustFS/S3, собственный MapReduce, независимый DuckDB, зарплатный и региональный анализ.
-Вход: только 2057 JSON-файлов варианта analysts. Стековые эксперименты: 5, 10 и все навыки.
-Регионы: Москва, Санкт-Петербург, Екатеринбург.
+| Работа | Код | Отчёт |
+| --- | --- | --- |
+| № 3: RustFS, MapReduce и DuckDB | [lab3](lab3/) | [PDF](report/report.pdf) |
+| № 4: Apache ZooKeeper | [lab4](lab4/) | [PDF](lab4/report/lab4_report.pdf) |
 
-## Состав
+Python 3.11+, Docker Desktop с Linux-контейнерами. Код № 4 использует функции
+MapReduce из № 3. Исходные данные и временные файлы в репозиторий не входят.
 
-- lab3/src — программы подготовки, расчётов, сверки и профилирования.
-- lab3/sql — независимые SQL-запросы.
-- lab3/configs, lab3/manifests — параметры, состав входа и контрольные суммы.
-- lab3/tests — проверки чанков, UTF-8, сочетаний и отказа маппера.
-- results — компактные итоговые таблицы, все 27 замеров и доказательства сверки.
+Запуск № 4 на рабочем стенде:
 
-Полные таблицы частот и исходный JSONL хранятся в hh-lake. Их адреса и SHA-256
-указаны в lab3/manifests/dataset.json и results/s3_results.json.
-Большие повторяющиеся CSV и промежуточные журналы в репозиторий не включены.
+```powershell
+Set-Location D:\rustfs-lab
+$py = 'D:\rustfs-lab\lab3\.venv\Scripts\python.exe'
+& $py -m pip install -r submission/github/lab4/requirements.lock.txt
+& $py submission/github/lab4/scripts/prepare_local.py --workspace D:/rustfs-lab
+Set-Location D:\rustfs-lab\submission\github
+docker compose -f lab4/compose.yaml up -d zoo1 zoo2 zoo3
+docker compose -f lab4/compose.yaml --profile experiment build coord-a
+& $py lab4/scripts/run_ensemble_checks.py
+& $py lab4/scripts/run_experiment.py --mode unsafe
+& $py lab4/scripts/run_experiment.py --mode fenced
+```
 
-## Результаты
+На другом стенде восстановить JSONL по `lab3/manifests/dataset.json`, эталонный CSV —
+по `results/s3_results.json` или пересчётом № 3. Файлы входа:
+`lab4/.runtime/input/vacancies.jsonl` и `reference.csv`.
+Новые запуски создают временные данные и автоматически выполняют полную сверку.
 
-`results/counts_summary.csv` содержит число уникальных навыков, пар, троек и промежуточных записей для стеков 5 / 10 / все.
+```powershell
+& $py -B -m unittest discover -s lab4/tests -v
+```
 
-MapReduce и DuckDB совпали по всем ключам и частотам:
-12075 ключей для k=5, 45296 для k=10 и 101718 для полного стека.
-После аварийного завершения процесса маппера и повтора задания результат совпал.
-Выполнены 27 измеряемых запусков с временем и пиком памяти клиентского дерева.
-Комбинатор маппера сократил shuffle на 28,9% и медианный пик RSS полного стека на 6,1%.
-Устойчивое ускорение полного стека по трём повторам не установлено.
-
-results/regional_demand_top10.csv содержит первые 10 навыков, пар и троек
-по каждому региону. Полные региональные и зарплатные таблицы восстанавливаются analyze.py.
-Медианы зарплат и размеры групп независимо проверены verify_analysis.py.
-
-## Воспроизведение
-
-Рабочая среда — Windows, Python 3.11+. Требуются RustFS 1.0.1 и rc 0.1.36
-в bin/, подготовленные шесть каталогов disks/disk1 ... disk6 и исходные JSON в data/analysts.
-Бинарники, каталоги дисков и данные в Git не входят.
-Сценарий проверки прав в `setup_storage.py` использует путь `D:/rustfs-lab/disks`
-из работы № 2; при переносе стенда его нужно изменить. Если RustFS уже работает
-и исходный объект доступен в S3, этапы setup_storage.py и prepare_data.py можно пропустить.
-
-S3-доступ берётся из существующего rc-профиля local либо переменных
-LAB3_S3_ACCESS_KEY / LAB3_S3_SECRET_KEY / LAB3_S3_ENDPOINT.
-Секреты не должны попадать в Git. Подробная опись исходных файлов создаётся
-заново при подготовке данных и исключена из Git.
-
-~~~powershell
-python -m venv lab3/.venv
-$py = 'lab3/.venv/Scripts/python.exe'
-& $py -m pip install -r lab3/requirements.lock.txt
-& $py -X utf8 lab3/src/setup_storage.py
-& $py -X utf8 lab3/src/prepare_data.py
-& $py lab3/src/install_extensions.py
-& $py -X utf8 lab3/src/run_validation.py
-& $py -m unittest discover -s lab3/tests -v
-& $py -X utf8 lab3/src/benchmark.py
-& $py -X utf8 lab3/src/analyze.py
-& $py -X utf8 lab3/src/verify_analysis.py
-& $py -X utf8 lab3/src/inspect_patterns.py
-~~~
-
-Сценарии записывают полные выходы в игнорируемый lab3/artifacts.
-Сначала выполняется run_validation.py: он создаёт контрольные counts.csv,
-необходимые для benchmark.py и analyze.py.
-Зафиксированные в results файлы относятся к исходным собственным запускам;
-повторный эксперимент не меняет эти снимки результатов автоматически.
-
-Полные выходы загружаются в S3:
-~~~powershell
-& $py -X utf8 lab3/src/upload_artifacts.py validation-20261101
-& $py -X utf8 lab3/src/upload_artifacts.py benchmark-20261101
-& $py -X utf8 lab3/src/upload_artifacts.py analysis-20261101
-~~~
-
-## Итоговый PDF
-
-LaTeX-проект для Overleaf хранится отдельно. По заданию в репозитории нужен PDF:
-после сборки добавьте только `report/report.pdf`. Исходники отчёта, изображения
-и промежуточные файлы сборки в этот комплект не входят.
+Для интеграционных тестов запущенного ансамбля задать `LAB4_TEST_ZK`:
+`127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183`.

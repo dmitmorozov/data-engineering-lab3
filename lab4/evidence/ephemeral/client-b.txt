@@ -1,0 +1,43 @@
+﻿**********************
+Начало записи сценария Windows PowerShell
+Время начала: 20261104173224
+Имя пользователя: DMITRY\dima2
+Запуск от имени пользователя: DMITRY\dima2
+Имя конфигурации: 
+Компьютер: DMITRY (Microsoft Windows NT 10.0.22631.0)
+Ведущее приложение: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ИД процесса: 28888
+PSVersion: 5.1.22621.6133
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.22621.6133
+BuildVersion: 10.0.22621.6133
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Транскрибирование запущено, выходной файл lab4/evidence/ephemeral/client-b.txt
+PS D:\rustfs-lab\submission\github> docker compose -f lab4/compose.yaml exec -T zoo2 zkCli.sh -server zoo1:2181,zoo2:2181,zoo3:2181 -timeout 10000
+aclVersion = 0
+ephemeralOwner = 0x10000174ec20006
+dataLength = 9
+numChildren = 0
+[zk: zoo1:2181,zoo2:2181,zoo3:2181(CONNECTED) 1] [zk: zoo1:2181,zoo2:2181,zoo3:2181(CONNECTED) 1] get -s /lab4-ephemera
+l-demo/ephemeral-20261104-1
+ls /lab4-ephemeral-demoNode does not exist: /lab4-ephemeral-demo/ephemeral-20261104-1
+[zk: zoo1:2181,zoo2:218quit    181(CONNECTED) 2] [zk: zoo1:2181,zoo2:2181,zoo3:2181(CONNECTED) 2]
+Node does not exist: /lab4-ephemeral-demoquit
+[zk: zoo1:2181,zoo2:2181,zoo3:2181(CONNECTED) 3] [zk: zoo1:2181,zoo2:2181,zoo3:2181(CONNECTED) 3] quit
+
+WATCHER::
+
+WatchedEvent state:Closed type:None path:null zxid: -1
+2026-11-04 14:35:32,478 [myid:] - INFO  [main:o.a.z.ZooKeeper@1230] - Session: 0x30000174e890004 closed
+2026-11-04 14:35:32,477 [myid:] - INFO  [main-EventThread:o.a.z.ClientCnxn$EventThread@556] - EventThread shut down for
+ session: 0x30000174e890004
+2026-11-04 14:35:32,479 [myid:] - ERROR [main:o.a.z.u.ServiceUtils@48] - Exiting JVM with code 1
+PS D:\rustfs-lab\submission\github> Stop-Transcript
+**********************
+Конец записи протокола Windows PowerShell
+Время окончания: 20261104173547
+**********************

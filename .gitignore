@@ -21,3 +21,6 @@
 /lab3/manifests/source_files.json
 /report/*
 !/report/report.pdf
+/lab4/.runtime/
+/lab4/report/*
+!/lab4/report/lab4_report.pdf

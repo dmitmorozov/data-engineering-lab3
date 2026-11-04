@@ -1,0 +1,13 @@
+**
+!lab3/
+!lab3/src/
+!lab3/src/**
+!lab3/configs/
+!lab3/configs/**
+!lab3/manifests/
+!lab3/manifests/dataset.json
+!lab4/
+!lab4/Dockerfile
+!lab4/requirements.lock.txt
+!lab4/src/
+!lab4/src/**

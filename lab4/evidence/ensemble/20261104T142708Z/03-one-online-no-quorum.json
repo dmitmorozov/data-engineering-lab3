@@ -1,0 +1,22 @@
+{
+  "at_utc": "2026-11-04T14:27:40.632441+00:00",
+  "servers": {
+    "2181": "This ZooKeeper instance is not currently serving requests\n",
+    "2182": "TimeoutError: timed out",
+    "2183": "TimeoutError: timed out"
+  },
+  "docker_ps": "NAME             IMAGE             COMMAND                  SERVICE   CREATED              STATUS                        PORTS\nde-lab4-zoo1-1   zookeeper:3.9.6   \"/bin/bash -ec 'cp /…\"   zoo1      About a minute ago   Up About a minute             127.0.0.1:2181->2181/tcp\nde-lab4-zoo2-1   zookeeper:3.9.6   \"/bin/bash -ec 'cp /…\"   zoo2      About a minute ago   Exited (143) 16 seconds ago   \nde-lab4-zoo3-1   zookeeper:3.9.6   \"/bin/bash -ec 'cp /…\"   zoo3      About a minute ago   Exited (143) 31 seconds ago   \n",
+  "client_probe": {
+    "expected": "unavailable",
+    "successful": false,
+    "error": "KazooTimeoutError",
+    "detail": "Connection time-out",
+    "elapsed_seconds": 6.26600000000326,
+    "expectation_met": true
+  },
+  "role_counts": {
+    "leader": 0,
+    "follower": 0
+  },
+  "roles_match": true
+}

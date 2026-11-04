@@ -1,0 +1,68 @@
+name: de-lab4
+x-coordinator: &coordinator
+  image: de-lab4-coordinator:local
+  build:
+    context: ..
+    dockerfile: lab4/Dockerfile
+  profiles: [experiment]
+  environment:
+    LAB4_ZK_HOSTS: zoo1:2181,zoo2:2181,zoo3:2181
+  volumes:
+    - ./.runtime/input:/input:ro
+    - ./.runtime/state:/state
+    - ./evidence:/evidence
+  command: ["--run-id", "${LAB4_RUN_ID:-not-started}", "--mode", "${LAB4_MODE:-fenced}", "--input", "/input/vacancies.jsonl", "--store", "/state", "--evidence", "/evidence", "--delay", "3", "--batch-records", "128"]
+services:
+  zoo1:
+    image: zookeeper:3.9.6
+    hostname: zoo1
+    entrypoint: ["/bin/bash", "-ec", "cp /lab4-config/myid /data/myid; exec /docker-entrypoint.sh zkServer.sh start-foreground"]
+    environment:
+      ZOO_MY_ID: "1"
+    ports: ["127.0.0.1:2181:2181"]
+    volumes:
+      - ./configs/zoo1.cfg:/conf/zoo.cfg:ro
+      - ./configs/myid1:/lab4-config/myid:ro
+      - zoo1-data:/data
+      - zoo1-log:/datalog
+  zoo2:
+    image: zookeeper:3.9.6
+    hostname: zoo2
+    entrypoint: ["/bin/bash", "-ec", "cp /lab4-config/myid /data/myid; exec /docker-entrypoint.sh zkServer.sh start-foreground"]
+    environment:
+      ZOO_MY_ID: "2"
+    ports: ["127.0.0.1:2182:2181"]
+    volumes:
+      - ./configs/zoo2.cfg:/conf/zoo.cfg:ro
+      - ./configs/myid2:/lab4-config/myid:ro
+      - zoo2-data:/data
+      - zoo2-log:/datalog
+  zoo3:
+    image: zookeeper:3.9.6
+    hostname: zoo3
+    entrypoint: ["/bin/bash", "-ec", "cp /lab4-config/myid /data/myid; exec /docker-entrypoint.sh zkServer.sh start-foreground"]
+    environment:
+      ZOO_MY_ID: "3"
+    ports: ["127.0.0.1:2183:2181"]
+    volumes:
+      - ./configs/zoo3.cfg:/conf/zoo.cfg:ro
+      - ./configs/myid3:/lab4-config/myid:ro
+      - zoo3-data:/data
+      - zoo3-log:/datalog
+  coord-a:
+    <<: *coordinator
+    environment:
+      LAB4_ZK_HOSTS: zoo1:2181,zoo2:2181,zoo3:2181
+      LAB4_COORDINATOR_ID: A
+  coord-b:
+    <<: *coordinator
+    environment:
+      LAB4_ZK_HOSTS: zoo1:2181,zoo2:2181,zoo3:2181
+      LAB4_COORDINATOR_ID: B
+volumes:
+  zoo1-data:
+  zoo1-log:
+  zoo2-data:
+  zoo2-log:
+  zoo3-data:
+  zoo3-log:
