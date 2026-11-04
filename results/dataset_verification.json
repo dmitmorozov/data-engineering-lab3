@@ -1,0 +1,10 @@
+{
+  "at_utc": "2026-11-01T19:19:10.899308+00:00",
+  "uri": "s3://hh-lake/raw/analysts/aa4d3566148d73b7/vacancies.jsonl",
+  "snapshot_id": "aa4d3566148d73b7",
+  "local_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+  "remote_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+  "bytes": 11858115,
+  "records": 2057,
+  "equal": true
+}

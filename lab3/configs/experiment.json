@@ -1,0 +1,32 @@
+{
+  "segment": "analysts",
+  "bucket": "hh-lake",
+  "alias": "local",
+  "endpoint": "http://127.0.0.1:9000",
+  "region": "us-east-1",
+  "stack_limits": [
+    5,
+    10,
+    null
+  ],
+  "stack_selection": "first_unique_in_source_order",
+  "chunk_bytes": 262144,
+  "batch_records": 128,
+  "workers": 2,
+  "max_inflight": 4,
+  "attempts": 3,
+  "duckdb_threads": 2,
+  "regions": [
+    "Москва",
+    "Санкт-Петербург",
+    "Екатеринбург"
+  ],
+  "salary_currency": "RUR",
+  "salary_primary_gross": false,
+  "salary_methodology_status": "approved",
+  "salary_representative": "midpoint_else_single_bound",
+  "salary_min_support": 5,
+  "salary_sensitivity_support": 10,
+  "pair_baseline": "most_frequent_member_all_vacancies",
+  "triple_baseline": "most_frequent_constituent_pair_all_vacancies"
+}

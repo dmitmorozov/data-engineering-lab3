@@ -1,0 +1,41 @@
+{
+  "stack_limits": [
+    5,
+    10,
+    "all"
+  ],
+  "checks": {
+    "5": {
+      "left": "lab3\\artifacts\\validation-20261101\\results\\mr5\\counts.csv",
+      "right": "lab3\\artifacts\\validation-20261101\\results\\sql5\\counts.csv",
+      "left_keys": 12075,
+      "right_keys": 12075,
+      "mismatched_keys": 0,
+      "equal": true
+    },
+    "10": {
+      "left": "lab3\\artifacts\\validation-20261101\\results\\mr10\\counts.csv",
+      "right": "lab3\\artifacts\\validation-20261101\\results\\sql10\\counts.csv",
+      "left_keys": 45296,
+      "right_keys": 45296,
+      "mismatched_keys": 0,
+      "equal": true
+    },
+    "all": {
+      "left": "lab3\\artifacts\\validation-20261101\\results\\mrall\\counts.csv",
+      "right": "lab3\\artifacts\\validation-20261101\\results\\sqlall\\counts.csv",
+      "left_keys": 101718,
+      "right_keys": 101718,
+      "mismatched_keys": 0,
+      "equal": true
+    }
+  },
+  "mapper_failure": {
+    "left": "lab3\\artifacts\\validation-20261101\\results\\mrall\\counts.csv",
+    "right": "lab3\\artifacts\\validation-20261101\\results\\mr_failure\\counts.csv",
+    "left_keys": 101718,
+    "right_keys": 101718,
+    "mismatched_keys": 0,
+    "equal": true
+  }
+}

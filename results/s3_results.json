@@ -1,0 +1,27 @@
+{
+  "bucket": "hh-lake",
+  "prefix": "results/analysts/validation-20261101/",
+  "full_mapreduce_results": [
+    {
+      "key": "results/analysts/validation-20261101/results/mr5/counts.csv",
+      "bytes": 1042869,
+      "sha256": "9f6d152e311d4fe04d16b2eae5166d7c51c2c67ecacabb5d4db958633f3a6c19",
+      "head_equal": true,
+      "remote_content_equal": true
+    },
+    {
+      "key": "results/analysts/validation-20261101/results/mr10/counts.csv",
+      "bytes": 4347098,
+      "sha256": "30ee633459c0398b734019a07b2ec4d15ae0e24c68ee3f4ac781308ad6fa18ce",
+      "head_equal": true,
+      "remote_content_equal": true
+    },
+    {
+      "key": "results/analysts/validation-20261101/results/mrall/counts.csv",
+      "bytes": 10587772,
+      "sha256": "3d1559ccc0967058a1c73fa7c94e9b0623b027c57e28f20ba142b29189c788f7",
+      "head_equal": true,
+      "remote_content_equal": true
+    }
+  ]
+}

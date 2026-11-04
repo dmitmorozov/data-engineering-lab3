@@ -1,0 +1,4 @@
+region,vacancies,with_skills,without_skills,with_any_salary,rur_net_n,rur_net_median,rur_gross_n,rur_gross_median,net_salary_coverage
+Москва,988,595,393,191,142,170000.0,46,133500.0,0.1437246963562753
+Санкт-Петербург,251,168,83,64,43,135000.0,21,105000.0,0.17131474103585656
+Екатеринбург,60,38,22,23,18,92500.0,5,67500.0,0.3

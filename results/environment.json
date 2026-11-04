@@ -1,0 +1,24 @@
+{
+  "at_utc": "2026-11-01T19:18:23.692417+00:00",
+  "platform": "Windows-10-10.0.22631-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "cpu_logical": 12,
+  "cpu_physical": 8,
+  "ram_bytes": 16890716160,
+  "boto3": "1.43.123",
+  "duckdb": "2.0.0",
+  "psutil": "7.2.2",
+  "volumes": [
+    "D:\\rustfs-lab\\disks\\disk1",
+    "D:\\rustfs-lab\\disks\\disk2",
+    "D:\\rustfs-lab\\disks\\disk3",
+    "D:\\rustfs-lab\\disks\\disk4",
+    "D:\\rustfs-lab\\disks\\disk5",
+    "D:\\rustfs-lab\\disks\\disk6"
+  ],
+  "same_physical_disk": true,
+  "erasure": {
+    "data": 3,
+    "parity": 3
+  }
+}

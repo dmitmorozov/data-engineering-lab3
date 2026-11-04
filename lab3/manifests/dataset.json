@@ -1,0 +1,12 @@
+{
+  "segment": "analysts",
+  "source_directory": "data/analysts",
+  "file_count": 2057,
+  "source_bytes": 11966676,
+  "snapshot_id": "aa4d3566148d73b7",
+  "jsonl_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+  "jsonl_bytes": 11858115,
+  "bucket": "hh-lake",
+  "key": "raw/analysts/aa4d3566148d73b7/vacancies.jsonl",
+  "uri": "s3://hh-lake/raw/analysts/aa4d3566148d73b7/vacancies.jsonl"
+}

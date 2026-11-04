@@ -1,0 +1,16 @@
+[
+  {
+    "event": "inject_mapper_exit",
+    "chunk_id": 2,
+    "exit_code": 70
+  },
+  {
+    "event": "mapper_process_failure",
+    "chunk_id": 2,
+    "attempt": 1,
+    "exit_code": 70,
+    "replay_chunks": [
+      2
+    ]
+  }
+]

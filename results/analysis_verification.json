@@ -1,0 +1,51 @@
+{
+  "equal": true,
+  "checks": [
+    {
+      "region": "Москва",
+      "group": "net",
+      "n": 142,
+      "median": 170000.0,
+      "equal": true
+    },
+    {
+      "region": "Москва",
+      "group": "gross",
+      "n": 46,
+      "median": 133500.0,
+      "equal": true
+    },
+    {
+      "region": "Санкт-Петербург",
+      "group": "net",
+      "n": 43,
+      "median": 135000.0,
+      "equal": true
+    },
+    {
+      "region": "Санкт-Петербург",
+      "group": "gross",
+      "n": 21,
+      "median": 105000.0,
+      "equal": true
+    },
+    {
+      "region": "Екатеринбург",
+      "group": "net",
+      "n": 18,
+      "median": 92500.0,
+      "equal": true
+    },
+    {
+      "region": "Екатеринбург",
+      "group": "gross",
+      "n": 5,
+      "median": 67500.0,
+      "equal": true
+    },
+    {
+      "salary_rankings_checked": 58,
+      "equal": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "Fresh process client tree; RustFS excluded; shared RSS pages may be counted across processes",
+  "wall_timer": "Process creation through exit, includes imports/client setup, S3, computation and local export",
+  "compute_timer": "S3 GET/SQL materialization through final counts, includes mapper startup; excludes client setup and CSV export",
+  "memory_timer": "Entire fresh-process lifetime; sampled every 10 ms; may miss shorter peaks",
+  "cache": "OS/server caches uncontrolled and likely warm; no dedicated warmup; method order rotated each repetition",
+  "repetitions": 3,
+  "workers_and_sql_threads": 2,
+  "optimization": "Mapper-local combiner, all other parameters fixed",
+  "code_commit": "2037c91bdc0f19c2edf4098a175f4b74c111f498",
+  "input_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6"
+}
