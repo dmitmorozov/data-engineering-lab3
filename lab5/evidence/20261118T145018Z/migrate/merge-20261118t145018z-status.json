@@ -1,0 +1,396 @@
+{
+  "job": {
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "metadata": {
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{},\"name\":\"merge-20261118t145018z\",\"namespace\":\"lab5\"},\"spec\":{\"backoffLimit\":0,\"template\":{\"metadata\":{\"labels\":{\"lab5-run\":\"20261118T145018Z\"}},\"spec\":{\"containers\":[{\"args\":[\"--prefix\",\"lab5/runs/20261118T145018Z/parallel\",\"--mode\",\"merge\"],\"env\":[{\"name\":\"LAB5_S3_ENDPOINT\",\"value\":\"http://rustfs.lab5.svc.cluster.local:9000\"}],\"envFrom\":[{\"secretRef\":{\"name\":\"lab5-s3\"}}],\"image\":\"de-lab5:local\",\"imagePullPolicy\":\"Never\",\"name\":\"calculate\",\"resources\":{\"limits\":{\"cpu\":\"1000m\",\"memory\":\"176Mi\"},\"requests\":{\"cpu\":\"500m\",\"memory\":\"128Mi\"}}}],\"restartPolicy\":\"Never\"}}}}\n"
+      },
+      "creationTimestamp": "2026-11-18T14:54:17Z",
+      "generation": 1,
+      "labels": {
+        "batch.kubernetes.io/controller-uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115",
+        "batch.kubernetes.io/job-name": "merge-20261118t145018z",
+        "controller-uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115",
+        "job-name": "merge-20261118t145018z",
+        "lab5-run": "20261118T145018Z"
+      },
+      "name": "merge-20261118t145018z",
+      "namespace": "lab5",
+      "resourceVersion": "1535",
+      "uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115"
+    },
+    "spec": {
+      "backoffLimit": 0,
+      "completionMode": "NonIndexed",
+      "completions": 1,
+      "manualSelector": false,
+      "parallelism": 1,
+      "podReplacementPolicy": "TerminatingOrFailed",
+      "selector": {
+        "matchLabels": {
+          "batch.kubernetes.io/controller-uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115"
+        }
+      },
+      "suspend": false,
+      "template": {
+        "metadata": {
+          "labels": {
+            "batch.kubernetes.io/controller-uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115",
+            "batch.kubernetes.io/job-name": "merge-20261118t145018z",
+            "controller-uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115",
+            "job-name": "merge-20261118t145018z",
+            "lab5-run": "20261118T145018Z"
+          }
+        },
+        "spec": {
+          "containers": [
+            {
+              "args": [
+                "--prefix",
+                "lab5/runs/20261118T145018Z/parallel",
+                "--mode",
+                "merge"
+              ],
+              "env": [
+                {
+                  "name": "LAB5_S3_ENDPOINT",
+                  "value": "http://rustfs.lab5.svc.cluster.local:9000"
+                }
+              ],
+              "envFrom": [
+                {
+                  "secretRef": {
+                    "name": "lab5-s3"
+                  }
+                }
+              ],
+              "image": "de-lab5:local",
+              "imagePullPolicy": "Never",
+              "name": "calculate",
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "176Mi"
+                },
+                "requests": {
+                  "cpu": "500m",
+                  "memory": "128Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File"
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "terminationGracePeriodSeconds": 30
+        }
+      }
+    },
+    "status": {
+      "completionTime": "2026-11-18T14:54:22Z",
+      "conditions": [
+        {
+          "lastProbeTime": "2026-11-18T14:54:22Z",
+          "lastTransitionTime": "2026-11-18T14:54:22Z",
+          "message": "Reached expected number of succeeded pods",
+          "reason": "CompletionsReached",
+          "status": "True",
+          "type": "SuccessCriteriaMet"
+        },
+        {
+          "lastProbeTime": "2026-11-18T14:54:22Z",
+          "lastTransitionTime": "2026-11-18T14:54:22Z",
+          "message": "Reached expected number of succeeded pods",
+          "reason": "CompletionsReached",
+          "status": "True",
+          "type": "Complete"
+        }
+      ],
+      "ready": 0,
+      "startTime": "2026-11-18T14:54:17Z",
+      "succeeded": 1,
+      "terminating": 0,
+      "uncountedTerminatedPods": {}
+    }
+  },
+  "pods": {
+    "apiVersion": "v1",
+    "items": [
+      {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "metadata": {
+          "creationTimestamp": "2026-11-18T14:54:17Z",
+          "generateName": "merge-20261118t145018z-",
+          "generation": 1,
+          "labels": {
+            "batch.kubernetes.io/controller-uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115",
+            "batch.kubernetes.io/job-name": "merge-20261118t145018z",
+            "controller-uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115",
+            "job-name": "merge-20261118t145018z",
+            "lab5-run": "20261118T145018Z"
+          },
+          "name": "merge-20261118t145018z-dvz64",
+          "namespace": "lab5",
+          "ownerReferences": [
+            {
+              "apiVersion": "batch/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "Job",
+              "name": "merge-20261118t145018z",
+              "uid": "fc13c38d-3654-4beb-ad69-0f8c2a862115"
+            }
+          ],
+          "resourceVersion": "1534",
+          "uid": "db8f124d-f889-47a8-a750-26b5f41bc3cb"
+        },
+        "spec": {
+          "containers": [
+            {
+              "args": [
+                "--prefix",
+                "lab5/runs/20261118T145018Z/parallel",
+                "--mode",
+                "merge"
+              ],
+              "env": [
+                {
+                  "name": "LAB5_S3_ENDPOINT",
+                  "value": "http://rustfs.lab5.svc.cluster.local:9000"
+                }
+              ],
+              "envFrom": [
+                {
+                  "secretRef": {
+                    "name": "lab5-s3"
+                  }
+                }
+              ],
+              "image": "de-lab5:local",
+              "imagePullPolicy": "Never",
+              "name": "calculate",
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "176Mi"
+                },
+                "requests": {
+                  "cpu": "500m",
+                  "memory": "128Mi"
+                }
+              },
+              "terminationMessagePath": "/dev/termination-log",
+              "terminationMessagePolicy": "File",
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                  "name": "kube-api-access-th64q",
+                  "readOnly": true
+                }
+              ]
+            }
+          ],
+          "dnsPolicy": "ClusterFirst",
+          "enableServiceLinks": true,
+          "nodeName": "de-lab5",
+          "preemptionPolicy": "PreemptLowerPriority",
+          "priority": 0,
+          "restartPolicy": "Never",
+          "schedulerName": "default-scheduler",
+          "securityContext": {},
+          "serviceAccount": "default",
+          "serviceAccountName": "default",
+          "terminationGracePeriodSeconds": 30,
+          "tolerations": [
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/not-ready",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            },
+            {
+              "effect": "NoExecute",
+              "key": "node.kubernetes.io/unreachable",
+              "operator": "Exists",
+              "tolerationSeconds": 300
+            }
+          ],
+          "volumes": [
+            {
+              "name": "kube-api-access-th64q",
+              "projected": {
+                "defaultMode": 420,
+                "sources": [
+                  {
+                    "serviceAccountToken": {
+                      "expirationSeconds": 3607,
+                      "path": "token"
+                    }
+                  },
+                  {
+                    "configMap": {
+                      "items": [
+                        {
+                          "key": "ca.crt",
+                          "path": "ca.crt"
+                        }
+                      ],
+                      "name": "kube-root-ca.crt"
+                    }
+                  },
+                  {
+                    "downwardAPI": {
+                      "items": [
+                        {
+                          "fieldRef": {
+                            "apiVersion": "v1",
+                            "fieldPath": "metadata.namespace"
+                          },
+                          "path": "namespace"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "status": {
+          "allocatedResources": {
+            "cpu": "500m",
+            "memory": "128Mi"
+          },
+          "conditions": [
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-18T14:54:21Z",
+              "message": "pod sandbox is not ready",
+              "observedGeneration": 1,
+              "reason": "PodSandboxNotReady",
+              "status": "False",
+              "type": "PodReadyToStartContainers"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-18T14:54:17Z",
+              "observedGeneration": 1,
+              "reason": "PodCompleted",
+              "status": "True",
+              "type": "Initialized"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-18T14:54:20Z",
+              "observedGeneration": 1,
+              "reason": "PodCompleted",
+              "status": "False",
+              "type": "Ready"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-18T14:54:20Z",
+              "observedGeneration": 1,
+              "reason": "PodCompleted",
+              "status": "False",
+              "type": "ContainersReady"
+            },
+            {
+              "lastProbeTime": null,
+              "lastTransitionTime": "2026-11-18T14:54:17Z",
+              "observedGeneration": 1,
+              "status": "True",
+              "type": "PodScheduled"
+            }
+          ],
+          "containerStatuses": [
+            {
+              "allocatedResources": {
+                "cpu": "500m",
+                "memory": "128Mi"
+              },
+              "containerID": "containerd://27a1eb53c6bbb5049c0d06d5437226748e61c96a7900b0f46cd5e8d747c6d51e",
+              "image": "docker.io/library/de-lab5:local",
+              "imageID": "sha256:0167eeb13a199258f636389e371a96c154c0e9fbe9a16a8e2b2f8f4cec872cf2",
+              "lastState": {},
+              "name": "calculate",
+              "ready": false,
+              "resources": {
+                "limits": {
+                  "cpu": "1",
+                  "memory": "176Mi"
+                },
+                "requests": {
+                  "cpu": "500m",
+                  "memory": "128Mi"
+                }
+              },
+              "restartCount": 0,
+              "started": false,
+              "state": {
+                "terminated": {
+                  "containerID": "containerd://27a1eb53c6bbb5049c0d06d5437226748e61c96a7900b0f46cd5e8d747c6d51e",
+                  "exitCode": 0,
+                  "finishedAt": "2026-11-18T14:54:19Z",
+                  "reason": "Completed",
+                  "startedAt": "2026-11-18T14:54:17Z"
+                }
+              },
+              "user": {
+                "linux": {
+                  "gid": 0,
+                  "supplementalGroups": [
+                    0
+                  ],
+                  "uid": 0
+                }
+              },
+              "volumeMounts": [
+                {
+                  "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                  "name": "kube-api-access-th64q",
+                  "readOnly": true,
+                  "recursiveReadOnly": "Disabled"
+                }
+              ]
+            }
+          ],
+          "hostIP": "192.168.49.2",
+          "hostIPs": [
+            {
+              "ip": "192.168.49.2"
+            }
+          ],
+          "observedGeneration": 1,
+          "phase": "Succeeded",
+          "podIP": "10.244.0.16",
+          "podIPs": [
+            {
+              "ip": "10.244.0.16"
+            }
+          ],
+          "qosClass": "Burstable",
+          "resources": {
+            "limits": {
+              "cpu": "1",
+              "memory": "176Mi"
+            },
+            "requests": {
+              "memory": "128Mi"
+            }
+          },
+          "startTime": "2026-11-18T14:54:17Z"
+        }
+      }
+    ],
+    "kind": "List",
+    "metadata": {
+      "resourceVersion": ""
+    }
+  }
+}

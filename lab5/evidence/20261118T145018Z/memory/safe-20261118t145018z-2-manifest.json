@@ -1,0 +1,57 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "safe-20261118t145018z-2",
+    "namespace": "lab5"
+  },
+  "spec": {
+    "backoffLimit": 0,
+    "template": {
+      "metadata": {
+        "labels": {
+          "lab5-run": "20261118T145018Z"
+        }
+      },
+      "spec": {
+        "restartPolicy": "Never",
+        "containers": [
+          {
+            "name": "calculate",
+            "image": "de-lab5:local",
+            "imagePullPolicy": "Never",
+            "args": [
+              "--prefix",
+              "lab5/runs/20261118T145018Z/selected-2",
+              "--mode",
+              "map"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "500m",
+                "memory": "128Mi"
+              },
+              "limits": {
+                "cpu": "1000m",
+                "memory": "176Mi"
+              }
+            },
+            "envFrom": [
+              {
+                "secretRef": {
+                  "name": "lab5-s3"
+                }
+              }
+            ],
+            "env": [
+              {
+                "name": "LAB5_S3_ENDPOINT",
+                "value": "http://host.minikube.internal:9000"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "at_utc": "2026-11-18T14:56:02.964824+00:00",
+  "command": [
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\minikube\\.minikube\\cache\\windows\\amd64\\v1.37.0\\kubectl.exe",
+    "--context=de-lab5",
+    "apply",
+    "-f",
+    "-"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Error from server (Forbidden): error when creating \"STDIN\": pods \"quota-two\" is forbidden: exceeded quota: lab5-budget, requested: limits.cpu=700m,requests.cpu=700m, used: limits.cpu=700m,requests.cpu=700m, limited: limits.cpu=1,requests.cpu=1\n"
+}

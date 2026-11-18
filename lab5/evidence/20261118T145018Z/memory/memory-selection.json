@@ -1,0 +1,556 @@
+{
+  "baseline": [
+    {
+      "mode": "map",
+      "index": "full",
+      "backend": "kubernetes_s3",
+      "at_utc": "2026-11-18T14:50:45.017627+00:00",
+      "elapsed_seconds": 5.900739201999954,
+      "unique_pairs": 15647,
+      "pair_frequency_sum": 40778,
+      "pairs_sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c",
+      "top10": [
+        {
+          "skills": [
+            "BPMN",
+            "UML"
+          ],
+          "count": 167
+        },
+        {
+          "skills": [
+            "SQL",
+            "Системный анализ"
+          ],
+          "count": 139
+        },
+        {
+          "skills": [
+            "BPMN",
+            "SQL"
+          ],
+          "count": 127
+        },
+        {
+          "skills": [
+            "SQL",
+            "UML"
+          ],
+          "count": 122
+        },
+        {
+          "skills": [
+            "Python",
+            "SQL"
+          ],
+          "count": 107
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Бизнес-анализ"
+          ],
+          "count": 104
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Системный анализ"
+          ],
+          "count": 103
+        },
+        {
+          "skills": [
+            "Разработка технических заданий",
+            "Системный анализ"
+          ],
+          "count": 102
+        },
+        {
+          "skills": [
+            "Бизнес-анализ",
+            "Системный анализ"
+          ],
+          "count": 99
+        },
+        {
+          "skills": [
+            "UML",
+            "Системный анализ"
+          ],
+          "count": 93
+        }
+      ],
+      "memory_peak": {
+        "source": "/sys/fs/cgroup/memory.peak",
+        "bytes": 140460032
+      },
+      "input_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+      "records": 2057,
+      "committed_batches": 17
+    },
+    {
+      "mode": "map",
+      "index": "full",
+      "backend": "kubernetes_s3",
+      "at_utc": "2026-11-18T14:50:58.125471+00:00",
+      "elapsed_seconds": 4.3776729490000434,
+      "unique_pairs": 15647,
+      "pair_frequency_sum": 40778,
+      "pairs_sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c",
+      "top10": [
+        {
+          "skills": [
+            "BPMN",
+            "UML"
+          ],
+          "count": 167
+        },
+        {
+          "skills": [
+            "SQL",
+            "Системный анализ"
+          ],
+          "count": 139
+        },
+        {
+          "skills": [
+            "BPMN",
+            "SQL"
+          ],
+          "count": 127
+        },
+        {
+          "skills": [
+            "SQL",
+            "UML"
+          ],
+          "count": 122
+        },
+        {
+          "skills": [
+            "Python",
+            "SQL"
+          ],
+          "count": 107
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Бизнес-анализ"
+          ],
+          "count": 104
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Системный анализ"
+          ],
+          "count": 103
+        },
+        {
+          "skills": [
+            "Разработка технических заданий",
+            "Системный анализ"
+          ],
+          "count": 102
+        },
+        {
+          "skills": [
+            "Бизнес-анализ",
+            "Системный анализ"
+          ],
+          "count": 99
+        },
+        {
+          "skills": [
+            "UML",
+            "Системный анализ"
+          ],
+          "count": 93
+        }
+      ],
+      "memory_peak": {
+        "source": "/sys/fs/cgroup/memory.peak",
+        "bytes": 139026432
+      },
+      "input_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+      "records": 2057,
+      "committed_batches": 17
+    },
+    {
+      "mode": "map",
+      "index": "full",
+      "backend": "kubernetes_s3",
+      "at_utc": "2026-11-18T14:51:11.071286+00:00",
+      "elapsed_seconds": 4.343101265999962,
+      "unique_pairs": 15647,
+      "pair_frequency_sum": 40778,
+      "pairs_sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c",
+      "top10": [
+        {
+          "skills": [
+            "BPMN",
+            "UML"
+          ],
+          "count": 167
+        },
+        {
+          "skills": [
+            "SQL",
+            "Системный анализ"
+          ],
+          "count": 139
+        },
+        {
+          "skills": [
+            "BPMN",
+            "SQL"
+          ],
+          "count": 127
+        },
+        {
+          "skills": [
+            "SQL",
+            "UML"
+          ],
+          "count": 122
+        },
+        {
+          "skills": [
+            "Python",
+            "SQL"
+          ],
+          "count": 107
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Бизнес-анализ"
+          ],
+          "count": 104
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Системный анализ"
+          ],
+          "count": 103
+        },
+        {
+          "skills": [
+            "Разработка технических заданий",
+            "Системный анализ"
+          ],
+          "count": 102
+        },
+        {
+          "skills": [
+            "Бизнес-анализ",
+            "Системный анализ"
+          ],
+          "count": 99
+        },
+        {
+          "skills": [
+            "UML",
+            "Системный анализ"
+          ],
+          "count": 93
+        }
+      ],
+      "memory_peak": {
+        "source": "/sys/fs/cgroup/memory.peak",
+        "bytes": 139350016
+      },
+      "input_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+      "records": 2057,
+      "committed_batches": 17
+    }
+  ],
+  "oom": {
+    "limit_mib": 64,
+    "job": "oom-20261118t145018z-64",
+    "terminated": [
+      {
+        "containerID": "containerd://9780035e0cc89f5629e3453675b522c047a39cd3e17c9edcfe7ae66be28269d2",
+        "exitCode": 137,
+        "finishedAt": "2026-11-18T14:51:18Z",
+        "reason": "OOMKilled",
+        "startedAt": "2026-11-18T14:51:16Z"
+      }
+    ]
+  },
+  "maximum_peak_bytes": 140460032,
+  "formula": "ceil(maximum_peak_bytes * 1.25 / (16 MiB)) * 16 MiB",
+  "selected_limit_mib": 176,
+  "successful": [
+    {
+      "mode": "map",
+      "index": "full",
+      "backend": "kubernetes_s3",
+      "at_utc": "2026-11-18T14:51:29.813406+00:00",
+      "elapsed_seconds": 4.464138302000038,
+      "unique_pairs": 15647,
+      "pair_frequency_sum": 40778,
+      "pairs_sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c",
+      "top10": [
+        {
+          "skills": [
+            "BPMN",
+            "UML"
+          ],
+          "count": 167
+        },
+        {
+          "skills": [
+            "SQL",
+            "Системный анализ"
+          ],
+          "count": 139
+        },
+        {
+          "skills": [
+            "BPMN",
+            "SQL"
+          ],
+          "count": 127
+        },
+        {
+          "skills": [
+            "SQL",
+            "UML"
+          ],
+          "count": 122
+        },
+        {
+          "skills": [
+            "Python",
+            "SQL"
+          ],
+          "count": 107
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Бизнес-анализ"
+          ],
+          "count": 104
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Системный анализ"
+          ],
+          "count": 103
+        },
+        {
+          "skills": [
+            "Разработка технических заданий",
+            "Системный анализ"
+          ],
+          "count": 102
+        },
+        {
+          "skills": [
+            "Бизнес-анализ",
+            "Системный анализ"
+          ],
+          "count": 99
+        },
+        {
+          "skills": [
+            "UML",
+            "Системный анализ"
+          ],
+          "count": 93
+        }
+      ],
+      "memory_peak": {
+        "source": "/sys/fs/cgroup/memory.peak",
+        "bytes": 139186176
+      },
+      "input_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+      "records": 2057,
+      "committed_batches": 17
+    },
+    {
+      "mode": "map",
+      "index": "full",
+      "backend": "kubernetes_s3",
+      "at_utc": "2026-11-18T14:51:42.532570+00:00",
+      "elapsed_seconds": 4.019943199000068,
+      "unique_pairs": 15647,
+      "pair_frequency_sum": 40778,
+      "pairs_sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c",
+      "top10": [
+        {
+          "skills": [
+            "BPMN",
+            "UML"
+          ],
+          "count": 167
+        },
+        {
+          "skills": [
+            "SQL",
+            "Системный анализ"
+          ],
+          "count": 139
+        },
+        {
+          "skills": [
+            "BPMN",
+            "SQL"
+          ],
+          "count": 127
+        },
+        {
+          "skills": [
+            "SQL",
+            "UML"
+          ],
+          "count": 122
+        },
+        {
+          "skills": [
+            "Python",
+            "SQL"
+          ],
+          "count": 107
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Бизнес-анализ"
+          ],
+          "count": 104
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Системный анализ"
+          ],
+          "count": 103
+        },
+        {
+          "skills": [
+            "Разработка технических заданий",
+            "Системный анализ"
+          ],
+          "count": 102
+        },
+        {
+          "skills": [
+            "Бизнес-анализ",
+            "Системный анализ"
+          ],
+          "count": 99
+        },
+        {
+          "skills": [
+            "UML",
+            "Системный анализ"
+          ],
+          "count": 93
+        }
+      ],
+      "memory_peak": {
+        "source": "/sys/fs/cgroup/memory.peak",
+        "bytes": 139964416
+      },
+      "input_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+      "records": 2057,
+      "committed_batches": 17
+    },
+    {
+      "mode": "map",
+      "index": "full",
+      "backend": "kubernetes_s3",
+      "at_utc": "2026-11-18T14:51:55.164897+00:00",
+      "elapsed_seconds": 3.7392519969999967,
+      "unique_pairs": 15647,
+      "pair_frequency_sum": 40778,
+      "pairs_sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c",
+      "top10": [
+        {
+          "skills": [
+            "BPMN",
+            "UML"
+          ],
+          "count": 167
+        },
+        {
+          "skills": [
+            "SQL",
+            "Системный анализ"
+          ],
+          "count": 139
+        },
+        {
+          "skills": [
+            "BPMN",
+            "SQL"
+          ],
+          "count": 127
+        },
+        {
+          "skills": [
+            "SQL",
+            "UML"
+          ],
+          "count": 122
+        },
+        {
+          "skills": [
+            "Python",
+            "SQL"
+          ],
+          "count": 107
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Бизнес-анализ"
+          ],
+          "count": 104
+        },
+        {
+          "skills": [
+            "BPMN",
+            "Системный анализ"
+          ],
+          "count": 103
+        },
+        {
+          "skills": [
+            "Разработка технических заданий",
+            "Системный анализ"
+          ],
+          "count": 102
+        },
+        {
+          "skills": [
+            "Бизнес-анализ",
+            "Системный анализ"
+          ],
+          "count": 99
+        },
+        {
+          "skills": [
+            "UML",
+            "Системный анализ"
+          ],
+          "count": 93
+        }
+      ],
+      "memory_peak": {
+        "source": "/sys/fs/cgroup/memory.peak",
+        "bytes": 139341824
+      },
+      "input_sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6",
+      "records": 2057,
+      "committed_batches": 17
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "allocatable_cpu": "12",
+  "existing_requests_millicpu": 950,
+  "test_request_millicpu": 10950,
+  "waiting": {
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"name\":\"cpu-waiting\",\"namespace\":\"lab5\"},\"spec\":{\"containers\":[{\"command\":[\"python\",\"-c\",\"import time; print('running', flush=True); time.sleep(120)\"],\"image\":\"de-lab5:local\",\"imagePullPolicy\":\"Never\",\"name\":\"hold\",\"resources\":{\"limits\":{\"cpu\":\"10950m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"10950m\",\"memory\":\"32Mi\"}}}],\"priorityClassName\":\"lab5-low\",\"restartPolicy\":\"Never\",\"terminationGracePeriodSeconds\":1}}\n"
+      },
+      "creationTimestamp": "2026-11-18T14:55:49Z",
+      "generation": 1,
+      "name": "cpu-waiting",
+      "namespace": "lab5",
+      "resourceVersion": "1629",
+      "uid": "890a1a59-7623-4141-a3fe-9ca0ad42e339"
+    },
+    "spec": {
+      "containers": [
+        {
+          "command": [
+            "python",
+            "-c",
+            "import time; print('running', flush=True); time.sleep(120)"
+          ],
+          "image": "de-lab5:local",
+          "imagePullPolicy": "Never",
+          "name": "hold",
+          "resources": {
+            "limits": {
+              "cpu": "10950m",
+              "memory": "64Mi"
+            },
+            "requests": {
+              "cpu": "10950m",
+              "memory": "32Mi"
+            }
+          },
+          "terminationMessagePath": "/dev/termination-log",
+          "terminationMessagePolicy": "File",
+          "volumeMounts": [
+            {
+              "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+              "name": "kube-api-access-tvb49",
+              "readOnly": true
+            }
+          ]
+        }
+      ],
+      "dnsPolicy": "ClusterFirst",
+      "enableServiceLinks": true,
+      "preemptionPolicy": "Never",
+      "priority": 100,
+      "priorityClassName": "lab5-low",
+      "restartPolicy": "Never",
+      "schedulerName": "default-scheduler",
+      "securityContext": {},
+      "serviceAccount": "default",
+      "serviceAccountName": "default",
+      "terminationGracePeriodSeconds": 1,
+      "tolerations": [
+        {
+          "effect": "NoExecute",
+          "key": "node.kubernetes.io/not-ready",
+          "operator": "Exists",
+          "tolerationSeconds": 300
+        },
+        {
+          "effect": "NoExecute",
+          "key": "node.kubernetes.io/unreachable",
+          "operator": "Exists",
+          "tolerationSeconds": 300
+        }
+      ],
+      "volumes": [
+        {
+          "name": "kube-api-access-tvb49",
+          "projected": {
+            "defaultMode": 420,
+            "sources": [
+              {
+                "serviceAccountToken": {
+                  "expirationSeconds": 3607,
+                  "path": "token"
+                }
+              },
+              {
+                "configMap": {
+                  "items": [
+                    {
+                      "key": "ca.crt",
+                      "path": "ca.crt"
+                    }
+                  ],
+                  "name": "kube-root-ca.crt"
+                }
+              },
+              {
+                "downwardAPI": {
+                  "items": [
+                    {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      },
+                      "path": "namespace"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "status": {
+      "conditions": [
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-18T14:55:49Z",
+          "message": "0/1 nodes are available: 1 Insufficient cpu. preemption: not eligible due to preemptionPolicy=Never.",
+          "observedGeneration": 1,
+          "reason": "Unschedulable",
+          "status": "False",
+          "type": "PodScheduled"
+        }
+      ],
+      "phase": "Pending",
+      "qosClass": "Burstable"
+    }
+  },
+  "high_running": {
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"name\":\"cpu-high\",\"namespace\":\"lab5\"},\"spec\":{\"containers\":[{\"command\":[\"python\",\"-c\",\"import time; print('running', flush=True); time.sleep(120)\"],\"image\":\"de-lab5:local\",\"imagePullPolicy\":\"Never\",\"name\":\"hold\",\"resources\":{\"limits\":{\"cpu\":\"10950m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"10950m\",\"memory\":\"32Mi\"}}}],\"priorityClassName\":\"lab5-high\",\"restartPolicy\":\"Never\",\"terminationGracePeriodSeconds\":1}}\n"
+      },
+      "creationTimestamp": "2026-11-18T14:55:50Z",
+      "generation": 1,
+      "name": "cpu-high",
+      "namespace": "lab5",
+      "resourceVersion": "1653",
+      "uid": "e28ca3bb-d432-4a92-9147-96b0e3bc62cb"
+    },
+    "spec": {
+      "containers": [
+        {
+          "command": [
+            "python",
+            "-c",
+            "import time; print('running', flush=True); time.sleep(120)"
+          ],
+          "image": "de-lab5:local",
+          "imagePullPolicy": "Never",
+          "name": "hold",
+          "resources": {
+            "limits": {
+              "cpu": "10950m",
+              "memory": "64Mi"
+            },
+            "requests": {
+              "cpu": "10950m",
+              "memory": "32Mi"
+            }
+          },
+          "terminationMessagePath": "/dev/termination-log",
+          "terminationMessagePolicy": "File",
+          "volumeMounts": [
+            {
+              "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+              "name": "kube-api-access-4qhsr",
+              "readOnly": true
+            }
+          ]
+        }
+      ],
+      "dnsPolicy": "ClusterFirst",
+      "enableServiceLinks": true,
+      "nodeName": "de-lab5",
+      "preemptionPolicy": "PreemptLowerPriority",
+      "priority": 1000,
+      "priorityClassName": "lab5-high",
+      "restartPolicy": "Never",
+      "schedulerName": "default-scheduler",
+      "securityContext": {},
+      "serviceAccount": "default",
+      "serviceAccountName": "default",
+      "terminationGracePeriodSeconds": 1,
+      "tolerations": [
+        {
+          "effect": "NoExecute",
+          "key": "node.kubernetes.io/not-ready",
+          "operator": "Exists",
+          "tolerationSeconds": 300
+        },
+        {
+          "effect": "NoExecute",
+          "key": "node.kubernetes.io/unreachable",
+          "operator": "Exists",
+          "tolerationSeconds": 300
+        }
+      ],
+      "volumes": [
+        {
+          "name": "kube-api-access-4qhsr",
+          "projected": {
+            "defaultMode": 420,
+            "sources": [
+              {
+                "serviceAccountToken": {
+                  "expirationSeconds": 3607,
+                  "path": "token"
+                }
+              },
+              {
+                "configMap": {
+                  "items": [
+                    {
+                      "key": "ca.crt",
+                      "path": "ca.crt"
+                    }
+                  ],
+                  "name": "kube-root-ca.crt"
+                }
+              },
+              {
+                "downwardAPI": {
+                  "items": [
+                    {
+                      "fieldRef": {
+                        "apiVersion": "v1",
+                        "fieldPath": "metadata.namespace"
+                      },
+                      "path": "namespace"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "status": {
+      "allocatedResources": {
+        "cpu": "10950m",
+        "memory": "32Mi"
+      },
+      "conditions": [
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-18T14:55:53Z",
+          "observedGeneration": 1,
+          "status": "True",
+          "type": "PodReadyToStartContainers"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-18T14:55:52Z",
+          "observedGeneration": 1,
+          "status": "True",
+          "type": "Initialized"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-18T14:55:53Z",
+          "observedGeneration": 1,
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-18T14:55:53Z",
+          "observedGeneration": 1,
+          "status": "True",
+          "type": "ContainersReady"
+        },
+        {
+          "lastProbeTime": null,
+          "lastTransitionTime": "2026-11-18T14:55:52Z",
+          "observedGeneration": 1,
+          "status": "True",
+          "type": "PodScheduled"
+        }
+      ],
+      "containerStatuses": [
+        {
+          "allocatedResources": {
+            "cpu": "10950m",
+            "memory": "32Mi"
+          },
+          "containerID": "containerd://39b9a3a39b9272c5c124569476b45f515b9dca1b01fc76bcff7dbeccbd65c781",
+          "image": "docker.io/library/de-lab5:local",
+          "imageID": "sha256:0167eeb13a199258f636389e371a96c154c0e9fbe9a16a8e2b2f8f4cec872cf2",
+          "lastState": {},
+          "name": "hold",
+          "ready": true,
+          "resources": {
+            "limits": {
+              "cpu": "10950m",
+              "memory": "64Mi"
+            },
+            "requests": {
+              "cpu": "10950m",
+              "memory": "32Mi"
+            }
+          },
+          "restartCount": 0,
+          "started": true,
+          "state": {
+            "running": {
+              "startedAt": "2026-11-18T14:55:53Z"
+            }
+          },
+          "user": {
+            "linux": {
+              "gid": 0,
+              "supplementalGroups": [
+                0
+              ],
+              "uid": 0
+            }
+          },
+          "volumeMounts": [
+            {
+              "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+              "name": "kube-api-access-4qhsr",
+              "readOnly": true,
+              "recursiveReadOnly": "Disabled"
+            }
+          ]
+        }
+      ],
+      "hostIP": "192.168.49.2",
+      "hostIPs": [
+        {
+          "ip": "192.168.49.2"
+        }
+      ],
+      "observedGeneration": 1,
+      "phase": "Running",
+      "podIP": "10.244.0.18",
+      "podIPs": [
+        {
+          "ip": "10.244.0.18"
+        }
+      ],
+      "qosClass": "Burstable",
+      "resources": {
+        "limits": {
+          "cpu": "10950m",
+          "memory": "64Mi"
+        },
+        "requests": {
+          "cpu": "10950m",
+          "memory": "32Mi"
+        }
+      },
+      "startTime": "2026-11-18T14:55:52Z"
+    }
+  },
+  "preemption_events": [
+    {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-11-18T14:55:50Z",
+      "involvedObject": {
+        "apiVersion": "v1",
+        "kind": "Pod",
+        "name": "cpu-low",
+        "namespace": "lab5",
+        "resourceVersion": "1625",
+        "uid": "0c7c1962-d10b-400e-bd94-b47b5167e8f5"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-11-18T14:55:50Z",
+      "message": "Preempted by pod e28ca3bb-d432-4a92-9147-96b0e3bc62cb on node de-lab5",
+      "metadata": {
+        "creationTimestamp": "2026-11-18T14:55:50Z",
+        "name": "cpu-low.18e92b7edcb50591",
+        "namespace": "lab5",
+        "resourceVersion": "1635",
+        "uid": "8abf0632-801f-4201-8bea-cbfac767a3e4"
+      },
+      "reason": "Preempted",
+      "reportingComponent": "default-scheduler",
+      "reportingInstance": "",
+      "source": {
+        "component": "default-scheduler"
+      },
+      "type": "Normal"
+    }
+  ]
+}

@@ -6,6 +6,7 @@
 | --- | --- | --- |
 | № 3: RustFS, MapReduce и DuckDB | [lab3](lab3/) | [PDF](report/report.pdf) |
 | № 4: Apache ZooKeeper | [lab4](lab4/) | [PDF](lab4/report/lab4_report.pdf) |
+| № 5: Kubernetes, ресурсы и планирование | [lab5](lab5/) | [PDF](lab5/report/lab5_report.pdf) |
 
 Python 3.11+, Docker Desktop с Linux-контейнерами. Код № 4 использует функции
 MapReduce из № 3. Исходные данные и временные файлы в репозиторий не входят.

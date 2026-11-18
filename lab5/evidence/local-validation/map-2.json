@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-11-18T13:27:36.093626+00:00",
+  "command": [
+    "D:\\rustfs-lab\\lab3\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\rustfs-lab\\submission\\github\\lab5\\src\\worker.py",
+    "--local-root",
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\objects",
+    "--index",
+    "2"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"at_utc\": \"2026-11-18T13:27:35.633066+00:00\", \"event\": \"started\", \"mode\": \"map\", \"index\": \"2\", \"backend\": \"local_validation\", \"endpoint\": null}\n{\"at_utc\": \"2026-11-18T13:27:35.633969+00:00\", \"event\": \"calculation_started\", \"expected_records\": 514}\n{\"at_utc\": \"2026-11-18T13:27:35.939090+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 0, \"mapper_pid\": 16408, \"records\": 128, \"emissions\": [452, 1559, 3968], \"shuffle_records\": 5979}\n{\"at_utc\": \"2026-11-18T13:27:35.948107+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 1, \"mapper_pid\": 25196, \"records\": 128, \"emissions\": [517, 2366, 10346], \"shuffle_records\": 13229}\n{\"at_utc\": \"2026-11-18T13:27:35.953949+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 2, \"mapper_pid\": 16408, \"records\": 128, \"emissions\": [623, 2606, 8690], \"shuffle_records\": 11919}\n{\"at_utc\": \"2026-11-18T13:27:35.960485+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 3, \"mapper_pid\": 25196, \"records\": 128, \"emissions\": [513, 1990, 6545], \"shuffle_records\": 9048}\n{\"at_utc\": \"2026-11-18T13:27:35.966500+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 4, \"mapper_pid\": 16408, \"records\": 2, \"emissions\": [14, 67, 220], \"shuffle_records\": 301}\n{\"at_utc\": \"2026-11-18T13:27:36.061663+00:00\", \"event\": \"completed\", \"mode\": \"map\", \"index\": \"2\", \"backend\": \"local_validation\", \"elapsed_seconds\": 0.4284781999886036, \"unique_pairs\": 5208, \"pair_frequency_sum\": 8588, \"pairs_sha256\": \"aa9aa03535e75044ae92f5d25bee2c3d9b87678ed37226e099e1e048dfda3c46\", \"top10\": [{\"skills\": [\"BPMN\", \"UML\"], \"count\": 52}, {\"skills\": [\"SQL\", \"UML\"], \"count\": 42}, {\"skills\": [\"Разработка технических заданий\", \"Системный анализ\"], \"count\": 38}, {\"skills\": [\"BPMN\", \"SQL\"], \"count\": 37}, {\"skills\": [\"SQL\", \"Системный анализ\"], \"count\": 35}, {\"skills\": [\"UML\", \"Системный анализ\"], \"count\": 35}, {\"skills\": [\"BPMN\", \"Разработка технических заданий\"], \"count\": 32}, {\"skills\": [\"BPMN\", \"Бизнес-анализ\"], \"count\": 31}, {\"skills\": [\"BPMN\", \"Системный анализ\"], \"count\": 30}, {\"skills\": [\"BPMN\", \"Моделирование бизнес процессов\"], \"count\": 26}], \"memory_peak\": {\"source\": \"unavailable_outside_container\", \"bytes\": null}, \"input_sha256\": \"224c4f67387283dbeb86cfdb0581c5a67cf8dd21f7b4abdd5a4ada89eaab6c15\", \"records\": 514, \"committed_batches\": 5}\n",
+  "stderr": ""
+}

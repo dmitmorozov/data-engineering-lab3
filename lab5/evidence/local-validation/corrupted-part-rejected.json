@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-11-18T13:27:39.593012+00:00",
+  "command": [
+    "D:\\rustfs-lab\\lab3\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\rustfs-lab\\submission\\github\\lab5\\src\\worker.py",
+    "--local-root",
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\objects",
+    "--mode",
+    "merge"
+  ],
+  "exit_code": 1,
+  "stdout": "{\"at_utc\": \"2026-11-18T13:27:39.512503+00:00\", \"event\": \"started\", \"mode\": \"merge\", \"index\": \"full\", \"backend\": \"local_validation\", \"endpoint\": null}\n",
+  "stderr": "Traceback (most recent call last):\n  File \"D:\\rustfs-lab\\submission\\github\\lab5\\src\\worker.py\", line 158, in <module>\n    main()\n  File \"D:\\rustfs-lab\\submission\\github\\lab5\\src\\worker.py\", line 129, in main\n    raise ValueError('Partial result checksum mismatch')\nValueError: Partial result checksum mismatch\n"
+}

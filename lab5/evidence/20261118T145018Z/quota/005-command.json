@@ -1,0 +1,16 @@
+{
+  "at_utc": "2026-11-18T14:56:08.333378+00:00",
+  "command": [
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\minikube\\.minikube\\cache\\windows\\amd64\\v1.37.0\\kubectl.exe",
+    "--context=de-lab5",
+    "-n",
+    "lab5-quota",
+    "delete",
+    "pod",
+    "quota-one",
+    "--wait=true"
+  ],
+  "exit_code": 0,
+  "stdout": "pod \"quota-one\" deleted from lab5-quota namespace\n",
+  "stderr": ""
+}

@@ -1,0 +1,70 @@
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: lab5-low
+value: 100
+globalDefault: false
+preemptionPolicy: Never
+---
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: lab5-high
+value: 1000
+globalDefault: false
+preemptionPolicy: PreemptLowerPriority
+---
+# Measured Allocatable=12000m, existing requests=950m; test request=10950m.
+# Recalculate these values on another node. The controller does so automatically.
+# The long lifetime holds the request reservation; it is not a CPU benchmark.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-low
+  namespace: lab5
+spec:
+  priorityClassName: lab5-low
+  restartPolicy: Never
+  terminationGracePeriodSeconds: 1
+  containers:
+    - name: hold
+      image: de-lab5:local
+      imagePullPolicy: Never
+      command: ["python", "-c", "import time; print('low priority running', flush=True); time.sleep(600)"]
+      resources:
+        requests: {cpu: "10950m", memory: "32Mi"}
+        limits: {cpu: "10950m", memory: "64Mi"}
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-waiting
+  namespace: lab5
+spec:
+  priorityClassName: lab5-low
+  restartPolicy: Never
+  containers:
+    - name: hold
+      image: de-lab5:local
+      imagePullPolicy: Never
+      command: ["python", "-c", "import time; print('waiting pod started', flush=True); time.sleep(600)"]
+      resources:
+        requests: {cpu: "10950m", memory: "32Mi"}
+        limits: {cpu: "10950m", memory: "64Mi"}
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-high
+  namespace: lab5
+spec:
+  priorityClassName: lab5-high
+  restartPolicy: Never
+  containers:
+    - name: hold
+      image: de-lab5:local
+      imagePullPolicy: Never
+      command: ["python", "-c", "import time; print('high priority running', flush=True); time.sleep(30)"]
+      resources:
+        requests: {cpu: "10950m", memory: "32Mi"}
+        limits: {cpu: "10950m", memory: "64Mi"}

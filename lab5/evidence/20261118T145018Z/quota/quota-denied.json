@@ -1,0 +1,4 @@
+{
+  "exit_code": 1,
+  "stderr": "Error from server (Forbidden): error when creating \"STDIN\": pods \"quota-two\" is forbidden: exceeded quota: lab5-budget, requested: limits.cpu=700m,requests.cpu=700m, used: limits.cpu=700m,requests.cpu=700m, limited: limits.cpu=1,requests.cpu=1\n"
+}

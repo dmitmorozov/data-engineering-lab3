@@ -1,0 +1,13 @@
+{
+  "at_utc": "2026-11-18T14:50:32.992945+00:00",
+  "command": [
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\minikube\\.minikube\\cache\\windows\\amd64\\v1.37.0\\kubectl.exe",
+    "--context=de-lab5",
+    "apply",
+    "-f",
+    "-"
+  ],
+  "exit_code": 0,
+  "stdout": "job.batch/base-20261118t145018z-0 created\n",
+  "stderr": ""
+}

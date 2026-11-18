@@ -1,0 +1,43 @@
+{
+  "objects": [
+    {
+      "key": "lab5/input/manifest.json",
+      "bytes": 1082,
+      "sha256": "129a09b62a22d880a132d1a07090a41bc669ebf8dd0ad5176c759a531e923b34"
+    },
+    {
+      "key": "lab5/input/part-0.jsonl",
+      "bytes": 2950946,
+      "sha256": "7ed1ce4cf520058635d4e5c55da7e9354f9b97200bae7f128a2456474ab7ad9e"
+    },
+    {
+      "key": "lab5/input/part-1.jsonl",
+      "bytes": 3004132,
+      "sha256": "d4d945e03dbac2414bca675809a75dbaf44b61d3313bdcc308df52263ba119aa"
+    },
+    {
+      "key": "lab5/input/part-2.jsonl",
+      "bytes": 2977552,
+      "sha256": "224c4f67387283dbeb86cfdb0581c5a67cf8dd21f7b4abdd5a4ada89eaab6c15"
+    },
+    {
+      "key": "lab5/input/part-3.jsonl",
+      "bytes": 2925485,
+      "sha256": "9b401791c9352aae70f8e493d4637c3024e79176666257fece367050aef9be2f"
+    },
+    {
+      "key": "lab5/input/reference.csv",
+      "bytes": 941563,
+      "sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c"
+    },
+    {
+      "key": "raw/analysts/aa4d3566148d73b7/vacancies.jsonl",
+      "bytes": 11858115,
+      "sha256": "aa4d3566148d73b7accc2ed97b3a3c3a63f66c873e2ee4e6dc56dff5d548f9f6"
+    }
+  ],
+  "all_sha256_equal": true,
+  "survived_pod_restart": true,
+  "internal_endpoint": "http://rustfs.lab5.svc.cluster.local:9000",
+  "layout": "one persistent volume; no erasure coding; original six-disk storage preserved"
+}

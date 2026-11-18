@@ -1,0 +1,13 @@
+{
+  "at_utc": "2026-11-18T14:56:02.343156+00:00",
+  "command": [
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\minikube\\.minikube\\cache\\windows\\amd64\\v1.37.0\\kubectl.exe",
+    "--context=de-lab5",
+    "apply",
+    "-f",
+    "-"
+  ],
+  "exit_code": 0,
+  "stdout": "pod/quota-one created\n",
+  "stderr": ""
+}

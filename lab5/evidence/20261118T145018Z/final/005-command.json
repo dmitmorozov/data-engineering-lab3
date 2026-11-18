@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-11-18T15:13:51.272817+00:00",
+  "command": [
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\minikube\\.minikube\\cache\\windows\\amd64\\v1.37.0\\kubectl.exe",
+    "--context=de-lab5",
+    "apply",
+    "--dry-run=server",
+    "-f",
+    "D:\\rustfs-lab\\submission\\github\\lab5\\manifests\\quota.yaml"
+  ],
+  "exit_code": 0,
+  "stdout": "namespace/lab5-quota unchanged (server dry run)\nresourcequota/lab5-budget unchanged (server dry run)\n",
+  "stderr": ""
+}

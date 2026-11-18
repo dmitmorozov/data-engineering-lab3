@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-11-18T13:27:37.615732+00:00",
+  "command": [
+    "D:\\rustfs-lab\\lab3\\.venv\\Scripts\\python.exe",
+    "-B",
+    "D:\\rustfs-lab\\submission\\github\\lab5\\src\\worker.py",
+    "--local-root",
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\objects",
+    "--mode",
+    "merge"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"at_utc\": \"2026-11-18T13:27:37.178422+00:00\", \"event\": \"started\", \"mode\": \"merge\", \"index\": \"full\", \"backend\": \"local_validation\", \"endpoint\": null}\n{\"at_utc\": \"2026-11-18T13:27:37.583341+00:00\", \"event\": \"completed\", \"mode\": \"merge\", \"index\": \"full\", \"backend\": \"local_validation\", \"elapsed_seconds\": 0.4049409999861382, \"unique_pairs\": 15647, \"pair_frequency_sum\": 40778, \"pairs_sha256\": \"c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c\", \"top10\": [{\"skills\": [\"BPMN\", \"UML\"], \"count\": 167}, {\"skills\": [\"SQL\", \"Системный анализ\"], \"count\": 139}, {\"skills\": [\"BPMN\", \"SQL\"], \"count\": 127}, {\"skills\": [\"SQL\", \"UML\"], \"count\": 122}, {\"skills\": [\"Python\", \"SQL\"], \"count\": 107}, {\"skills\": [\"BPMN\", \"Бизнес-анализ\"], \"count\": 104}, {\"skills\": [\"BPMN\", \"Системный анализ\"], \"count\": 103}, {\"skills\": [\"Разработка технических заданий\", \"Системный анализ\"], \"count\": 102}, {\"skills\": [\"Бизнес-анализ\", \"Системный анализ\"], \"count\": 99}, {\"skills\": [\"UML\", \"Системный анализ\"], \"count\": 93}], \"memory_peak\": {\"source\": \"unavailable_outside_container\", \"bytes\": null}, \"records\": 2057, \"parts\": 4}\n",
+  "stderr": ""
+}

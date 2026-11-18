@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-11-18T14:51:22.611594+00:00",
+  "command": [
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\minikube\\.minikube\\cache\\windows\\amd64\\v1.37.0\\kubectl.exe",
+    "--context=de-lab5",
+    "-n",
+    "lab5",
+    "logs",
+    "oom-20261118t145018z-64-nfdbd"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"at_utc\": \"2026-11-18T14:51:17.409043+00:00\", \"event\": \"started\", \"mode\": \"map\", \"index\": \"full\", \"backend\": \"s3\", \"endpoint\": \"http://host.minikube.internal:9000\"}\n{\"at_utc\": \"2026-11-18T14:51:17.449016+00:00\", \"event\": \"calculation_started\", \"expected_records\": 2057}\n",
+  "stderr": ""
+}

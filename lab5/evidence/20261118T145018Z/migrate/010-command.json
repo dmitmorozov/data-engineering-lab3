@@ -1,0 +1,14 @@
+{
+  "at_utc": "2026-11-18T14:54:15.714852+00:00",
+  "command": [
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\minikube\\.minikube\\cache\\windows\\amd64\\v1.37.0\\kubectl.exe",
+    "--context=de-lab5",
+    "-n",
+    "lab5",
+    "logs",
+    "parallel-20261118t145018z-1-fbkqp"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"at_utc\": \"2026-11-18T14:54:03.254018+00:00\", \"event\": \"started\", \"mode\": \"map\", \"index\": \"1\", \"backend\": \"s3\", \"endpoint\": \"http://rustfs.lab5.svc.cluster.local:9000\"}\n{\"at_utc\": \"2026-11-18T14:54:03.263902+00:00\", \"event\": \"calculation_started\", \"expected_records\": 514}\n{\"at_utc\": \"2026-11-18T14:54:04.830714+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 0, \"mapper_pid\": 8, \"records\": 128, \"emissions\": [655, 4301, 28517], \"shuffle_records\": 33473}\n{\"at_utc\": \"2026-11-18T14:54:04.843293+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 1, \"mapper_pid\": 9, \"records\": 128, \"emissions\": [570, 3176, 19696], \"shuffle_records\": 23442}\n{\"at_utc\": \"2026-11-18T14:54:04.878605+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 2, \"mapper_pid\": 8, \"records\": 128, \"emissions\": [523, 2834, 16111], \"shuffle_records\": 19468}\n{\"at_utc\": \"2026-11-18T14:54:04.883673+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 3, \"mapper_pid\": 9, \"records\": 128, \"emissions\": [463, 1723, 6653], \"shuffle_records\": 8839}\n{\"at_utc\": \"2026-11-18T14:54:04.891832+00:00\", \"event\": \"reduce_commit\", \"chunk_id\": 4, \"mapper_pid\": 8, \"records\": 2, \"emissions\": [21, 112, 399], \"shuffle_records\": 532}\n{\"at_utc\": \"2026-11-18T14:54:04.991915+00:00\", \"event\": \"completed\", \"mode\": \"map\", \"index\": \"1\", \"backend\": \"kubernetes_s3\", \"elapsed_seconds\": 1.7379390680000597, \"unique_pairs\": 4789, \"pair_frequency_sum\": 12146, \"pairs_sha256\": \"9e241e0470b48769170d45454f828fea15c5cb597818d6b0259f075f8c683d41\", \"top10\": [{\"skills\": [\"BPMN\", \"UML\"], \"count\": 44}, {\"skills\": [\"SQL\", \"Системный анализ\"], \"count\": 40}, {\"skills\": [\"Python\", \"SQL\"], \"count\": 34}, {\"skills\": [\"BPMN\", \"SQL\"], \"count\": 30}, {\"skills\": [\"BPMN\", \"Системный анализ\"], \"count\": 30}, {\"skills\": [\"Бизнес-анализ\", \"Системный анализ\"], \"count\": 30}, {\"skills\": [\"SQL\", \"UML\"], \"count\": 27}, {\"skills\": [\"BPMN\", \"Бизнес-анализ\"], \"count\": 26}, {\"skills\": [\"Аналитическое мышление\", \"Бизнес-анализ\"], \"count\": 25}, {\"skills\": [\"REST\", \"SOAP\"], \"count\": 24}], \"memory_peak\": {\"source\": \"/sys/fs/cgroup/memory.peak\", \"bytes\": 119476224}, \"input_sha256\": \"d4d945e03dbac2414bca675809a75dbaf44b61d3313bdcc308df52263ba119aa\", \"records\": 514, \"committed_batches\": 5}\n",
+  "stderr": ""
+}

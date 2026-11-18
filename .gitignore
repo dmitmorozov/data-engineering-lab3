@@ -22,5 +22,6 @@
 /report/*
 !/report/report.pdf
 /lab4/.runtime/
+/lab5/.runtime/
 /lab4/report/*
 !/lab4/report/lab4_report.pdf

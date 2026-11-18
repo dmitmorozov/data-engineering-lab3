@@ -1,0 +1,17 @@
+{
+  "run_id": "20261118T145018Z",
+  "all_15647_pairs_equal_to_lab3": true,
+  "pair_frequency_sum": 40778,
+  "canonical_pairs_sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c",
+  "oom_killed_limit_mib": 64,
+  "maximum_baseline_peak_mib": 133.953,
+  "selected_limit_mib": 176,
+  "successful_repeats": 3,
+  "s3_persistent_after_pod_restart": true,
+  "maximum_parallel_programs": 2,
+  "insufficient_cpu_observed": true,
+  "scheduler_preemption_observed": true,
+  "quota_denial_and_recovery_observed": true,
+  "server_dry_run_manifests_passed": true,
+  "credential_scan_passed": true
+}

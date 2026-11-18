@@ -1,0 +1,17 @@
+{
+  "at_utc": "2026-11-18T14:56:02.591672+00:00",
+  "command": [
+    "D:\\rustfs-lab\\submission\\github\\lab5\\.runtime\\minikube\\.minikube\\cache\\windows\\amd64\\v1.37.0\\kubectl.exe",
+    "--context=de-lab5",
+    "-n",
+    "lab5-quota",
+    "get",
+    "resourcequota",
+    "lab5-budget",
+    "-o",
+    "json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n    \"apiVersion\": \"v1\",\n    \"kind\": \"ResourceQuota\",\n    \"metadata\": {\n        \"annotations\": {\n            \"kubectl.kubernetes.io/last-applied-configuration\": \"{\\\"apiVersion\\\":\\\"v1\\\",\\\"kind\\\":\\\"ResourceQuota\\\",\\\"metadata\\\":{\\\"annotations\\\":{},\\\"name\\\":\\\"lab5-budget\\\",\\\"namespace\\\":\\\"lab5-quota\\\"},\\\"spec\\\":{\\\"hard\\\":{\\\"limits.cpu\\\":\\\"1\\\",\\\"limits.memory\\\":\\\"256Mi\\\",\\\"pods\\\":\\\"2\\\",\\\"requests.cpu\\\":\\\"1\\\",\\\"requests.memory\\\":\\\"128Mi\\\"}}}\\n\"\n        },\n        \"creationTimestamp\": \"2026-11-18T14:56:01Z\",\n        \"name\": \"lab5-budget\",\n        \"namespace\": \"lab5-quota\",\n        \"resourceVersion\": \"1685\",\n        \"uid\": \"297a237c-b607-4a12-a4c7-4d04a1c899b9\"\n    },\n    \"spec\": {\n        \"hard\": {\n            \"limits.cpu\": \"1\",\n            \"limits.memory\": \"256Mi\",\n            \"pods\": \"2\",\n            \"requests.cpu\": \"1\",\n            \"requests.memory\": \"128Mi\"\n        }\n    },\n    \"status\": {\n        \"hard\": {\n            \"limits.cpu\": \"1\",\n            \"limits.memory\": \"256Mi\",\n            \"pods\": \"2\",\n            \"requests.cpu\": \"1\",\n            \"requests.memory\": \"128Mi\"\n        },\n        \"used\": {\n            \"limits.cpu\": \"700m\",\n            \"limits.memory\": \"64Mi\",\n            \"pods\": \"1\",\n            \"requests.cpu\": \"700m\",\n            \"requests.memory\": \"32Mi\"\n        }\n    }\n}\n",
+  "stderr": ""
+}

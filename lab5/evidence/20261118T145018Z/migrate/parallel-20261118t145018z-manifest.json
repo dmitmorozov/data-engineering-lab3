@@ -1,0 +1,68 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "parallel-20261118t145018z",
+    "namespace": "lab5"
+  },
+  "spec": {
+    "backoffLimit": 2,
+    "template": {
+      "metadata": {
+        "labels": {
+          "lab5-run": "20261118T145018Z"
+        }
+      },
+      "spec": {
+        "restartPolicy": "Never",
+        "containers": [
+          {
+            "name": "calculate",
+            "image": "de-lab5:local",
+            "imagePullPolicy": "Never",
+            "args": [
+              "--prefix",
+              "lab5/runs/20261118T145018Z/parallel",
+              "--mode",
+              "map"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "500m",
+                "memory": "128Mi"
+              },
+              "limits": {
+                "cpu": "1000m",
+                "memory": "176Mi"
+              }
+            },
+            "envFrom": [
+              {
+                "secretRef": {
+                  "name": "lab5-s3"
+                }
+              }
+            ],
+            "env": [
+              {
+                "name": "LAB5_S3_ENDPOINT",
+                "value": "http://rustfs.lab5.svc.cluster.local:9000"
+              },
+              {
+                "name": "JOB_COMPLETION_INDEX",
+                "valueFrom": {
+                  "fieldRef": {
+                    "fieldPath": "metadata.annotations['batch.kubernetes.io/job-completion-index']"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "completionMode": "Indexed",
+    "completions": 4,
+    "parallelism": 2
+  }
+}

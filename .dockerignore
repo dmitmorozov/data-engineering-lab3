@@ -11,3 +11,8 @@
 !lab4/requirements.lock.txt
 !lab4/src/
 !lab4/src/**
+!lab5/
+!lab5/Dockerfile
+!lab5/requirements.lock.txt
+!lab5/src/
+!lab5/src/**

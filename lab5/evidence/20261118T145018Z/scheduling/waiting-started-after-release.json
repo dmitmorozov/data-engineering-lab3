@@ -1,0 +1,231 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"name\":\"cpu-waiting\",\"namespace\":\"lab5\"},\"spec\":{\"containers\":[{\"command\":[\"python\",\"-c\",\"import time; print('running', flush=True); time.sleep(120)\"],\"image\":\"de-lab5:local\",\"imagePullPolicy\":\"Never\",\"name\":\"hold\",\"resources\":{\"limits\":{\"cpu\":\"10950m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"10950m\",\"memory\":\"32Mi\"}}}],\"priorityClassName\":\"lab5-low\",\"restartPolicy\":\"Never\",\"terminationGracePeriodSeconds\":1}}\n"
+    },
+    "creationTimestamp": "2026-11-18T14:55:49Z",
+    "generation": 1,
+    "name": "cpu-waiting",
+    "namespace": "lab5",
+    "resourceVersion": "1671",
+    "uid": "890a1a59-7623-4141-a3fe-9ca0ad42e339"
+  },
+  "spec": {
+    "containers": [
+      {
+        "command": [
+          "python",
+          "-c",
+          "import time; print('running', flush=True); time.sleep(120)"
+        ],
+        "image": "de-lab5:local",
+        "imagePullPolicy": "Never",
+        "name": "hold",
+        "resources": {
+          "limits": {
+            "cpu": "10950m",
+            "memory": "64Mi"
+          },
+          "requests": {
+            "cpu": "10950m",
+            "memory": "32Mi"
+          }
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-tvb49",
+            "readOnly": true
+          }
+        ]
+      }
+    ],
+    "dnsPolicy": "ClusterFirst",
+    "enableServiceLinks": true,
+    "nodeName": "de-lab5",
+    "preemptionPolicy": "Never",
+    "priority": 100,
+    "priorityClassName": "lab5-low",
+    "restartPolicy": "Never",
+    "schedulerName": "default-scheduler",
+    "securityContext": {},
+    "serviceAccount": "default",
+    "serviceAccountName": "default",
+    "terminationGracePeriodSeconds": 1,
+    "tolerations": [
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      }
+    ],
+    "volumes": [
+      {
+        "name": "kube-api-access-tvb49",
+        "projected": {
+          "defaultMode": 420,
+          "sources": [
+            {
+              "serviceAccountToken": {
+                "expirationSeconds": 3607,
+                "path": "token"
+              }
+            },
+            {
+              "configMap": {
+                "items": [
+                  {
+                    "key": "ca.crt",
+                    "path": "ca.crt"
+                  }
+                ],
+                "name": "kube-root-ca.crt"
+              }
+            },
+            {
+              "downwardAPI": {
+                "items": [
+                  {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    },
+                    "path": "namespace"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "status": {
+    "allocatedResources": {
+      "cpu": "10950m",
+      "memory": "32Mi"
+    },
+    "conditions": [
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-18T14:55:57Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodReadyToStartContainers"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-18T14:55:56Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Initialized"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-18T14:55:57Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-18T14:55:57Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "ContainersReady"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-11-18T14:55:56Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodScheduled"
+      }
+    ],
+    "containerStatuses": [
+      {
+        "allocatedResources": {
+          "cpu": "10950m",
+          "memory": "32Mi"
+        },
+        "containerID": "containerd://6b2465f1c8db8980c763c3af44e2198df4e2b7d57733f203a857cf26233ada6d",
+        "image": "docker.io/library/de-lab5:local",
+        "imageID": "sha256:0167eeb13a199258f636389e371a96c154c0e9fbe9a16a8e2b2f8f4cec872cf2",
+        "lastState": {},
+        "name": "hold",
+        "ready": true,
+        "resources": {
+          "limits": {
+            "cpu": "10950m",
+            "memory": "64Mi"
+          },
+          "requests": {
+            "cpu": "10950m",
+            "memory": "32Mi"
+          }
+        },
+        "restartCount": 0,
+        "started": true,
+        "state": {
+          "running": {
+            "startedAt": "2026-11-18T14:55:57Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 0,
+            "supplementalGroups": [
+              0
+            ],
+            "uid": 0
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-tvb49",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          }
+        ]
+      }
+    ],
+    "hostIP": "192.168.49.2",
+    "hostIPs": [
+      {
+        "ip": "192.168.49.2"
+      }
+    ],
+    "observedGeneration": 1,
+    "phase": "Running",
+    "podIP": "10.244.0.19",
+    "podIPs": [
+      {
+        "ip": "10.244.0.19"
+      }
+    ],
+    "qosClass": "Burstable",
+    "resources": {
+      "limits": {
+        "cpu": "10950m",
+        "memory": "64Mi"
+      },
+      "requests": {
+        "cpu": "10950m",
+        "memory": "32Mi"
+      }
+    },
+    "startTime": "2026-11-18T14:55:56Z"
+  }
+}

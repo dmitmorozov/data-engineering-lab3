@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-baseline
+  namespace: lab5
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      labels:
+        app: lab5-pairs
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: calculate
+          image: de-lab5:local
+          imagePullPolicy: Never
+          args: ["--index", "full", "--prefix", "lab5/baseline"]
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "128Mi"
+            limits:
+              cpu: "1000m"
+              memory: "512Mi"
+          envFrom:
+            - secretRef:
+                name: lab5-s3
+          env:
+            - name: LAB5_S3_ENDPOINT
+              value: http://host.minikube.internal:9000

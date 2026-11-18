@@ -1,0 +1,83 @@
+{
+  "execution": "local Python validation; not a Kubernetes run",
+  "records": 2057,
+  "unique_pairs": 15647,
+  "sum_pair_frequencies": 40778,
+  "all_pairs_equal": true,
+  "reference_sha256": "c8669dfcefc69fbbd12b8694226c9045cd70958fc497a8641e9dadef773efb8c",
+  "retry_does_not_double_count": true,
+  "corrupted_part_rejected": true,
+  "rejected_merge_keeps_previous_result": true,
+  "top10": [
+    {
+      "skills": [
+        "BPMN",
+        "UML"
+      ],
+      "count": 167
+    },
+    {
+      "skills": [
+        "SQL",
+        "Системный анализ"
+      ],
+      "count": 139
+    },
+    {
+      "skills": [
+        "BPMN",
+        "SQL"
+      ],
+      "count": 127
+    },
+    {
+      "skills": [
+        "SQL",
+        "UML"
+      ],
+      "count": 122
+    },
+    {
+      "skills": [
+        "Python",
+        "SQL"
+      ],
+      "count": 107
+    },
+    {
+      "skills": [
+        "BPMN",
+        "Бизнес-анализ"
+      ],
+      "count": 104
+    },
+    {
+      "skills": [
+        "BPMN",
+        "Системный анализ"
+      ],
+      "count": 103
+    },
+    {
+      "skills": [
+        "Разработка технических заданий",
+        "Системный анализ"
+      ],
+      "count": 102
+    },
+    {
+      "skills": [
+        "Бизнес-анализ",
+        "Системный анализ"
+      ],
+      "count": 99
+    },
+    {
+      "skills": [
+        "UML",
+        "Системный анализ"
+      ],
+      "count": 93
+    }
+  ]
+}
